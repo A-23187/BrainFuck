@@ -1,0 +1,30 @@
+%YAML 1.2
+---
+name: BrainFuck
+file_extensions:
+  - bf
+scope: source.brainfuck
+contexts:
+  main:
+    - match: (?i)^brainfuck$
+      scope: other
+    - match: \[
+      scope: symbol.loop
+      push: brackets
+    - match: \]
+      scope: invalid.unclosed-brackets
+    - match: (\+\s*-|-\s*\+)|(<\s*>|>\s*<)
+      captures:
+        1: warning.arithmetic
+        2: warning.pointer
+    - match: ([+-])|([<>])|([,.])
+      captures:
+        1: symbol.arithmetic
+        2: symbol.pointer
+        3: symbol.io
+
+  brackets:
+    - match: \]
+      scope: symbol.loop
+      pop: true
+    - include: main
