@@ -38,5 +38,10 @@
 1. [BrainFuck.sublime-syntax](https://github.com/A-23187/BrainFuck/blob/master/others/BrainFuck.sublime-syntax)  
 2. [BrainFuck.tmTheme](https://github.com/A-23187/BrainFuck/blob/master/others/BrainFuck.tmTheme)  
 
-更多介绍
-[BrainFuck之旅 - 知乎](https://zhuanlan.zhihu.com/p/56566363)
+更多介绍  
+[BrainFuck之旅 - 知乎](https://zhuanlan.zhihu.com/p/56566363)  
+
+TODO  
+- [ ] 实现可视化功能
+- [ ] 基于LLVM实现为编译器
+- [ ] JIT
